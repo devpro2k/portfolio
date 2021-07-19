@@ -106,7 +106,7 @@ main {
   /* grid-template-columns: repeat(7, 1fr); */
   grid-row-gap: 4em;
   margin: 0 2em;
-  background: radial-gradient(goldenrod, rgb(0, 89, 255));
+  background: radial-gradient(cadetblue, teal);
   border: 2px solid brown;
 
   padding: 5px;
