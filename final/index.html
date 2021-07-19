@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/small.css" />
     <link rel="stylesheet" href="css/medium.css" />
-    <link rel="stylesheet" href="css/large.css" />
+
 </head>
 
 <body>
@@ -23,20 +23,27 @@
             <img class="headericon" src="" alt="" />
             <h1>Travel Weather</h1>
             <h2 class="motto">"Don't get caught out in the weather"</h2>
-            <nav>
-                <ul class="navigation">
-                    <li><a onclick="toggleMenu()" href="#">&#9776; Menu</a></li>
-
-                </ul>
-            </nav>
+            <section class="top-banner">
+                <div class="container">
+                    <form>
+                        <input type="text" class="city-name" placeholder="Search for a city" autofocus>
+                        <button type="submit">SUBMIT</button>
+                        <span class="msg"></span>
+                    </form>
+                </div>
+            </section>
+            <section class="ajax-section">
+                <div class="container">
+                    <ul class="cities"></ul>
+                </div>
+            </section>
         </header>
+        <h2 id="cname"></h2>
         <main id="main-content">
             <h2 class="pic-head"></h2>
             <div id="overlay">
-                <div>
-                    <picture>
-                        <img class="main-img" src="./img/main.jpg" alt="mountains" loading="lazy" />
-                    </picture>
+                <div class="main-img-container">
+                    <img class="main-img" src="./img/main.jpg" alt="mountains" />
                 </div>
                 <div id="ss-atmospheric">
                     <h2 class="weatherhead"><u>Current Weather</u></h2>
@@ -45,47 +52,12 @@
                     <p>Wind Chill: <span id="output"></span></p>
                     <p>Humidity: <span id="humidity"></span></p>
                     <p>Wind Speed: <span id="speed"></span></p>
-                    </section>
-
-
-
                 </div>
             </div>
             <section class="forecast">
-                <!--<h3>7 Day Forecast</h3> -->
-                <table>
-                    <thead>
-                        <th colspan="7"> Seven Day Forecast</th>
-                    </thead>
-                    <tr>
-                        <th><span id="dayofweek1"></span></th>
-                        <th><span id="dayofweek2"></span></th>
-                        <th><span id="dayofweek3"></span></th>
-                        <th><span id="dayofweek4"></span></th>
-                        <th><span id="dayofweek5"></span></th>
-                        <th><span id="dayofweek6"></span></th>
-                        <th><span id="dayofweek7"></span></th>
-                    </tr>
-
-                    <tr>
-                        <td><span id="isrc1"></span> &nbsp; <img src="" alt="" id="icon1"></td>
-                        <td><span id="isrc2"></span> &nbsp; <img src="" alt="" id="icon2"></td>
-                        <td><span id="isrc3"></span> &nbsp; <img src="" alt="" id="icon3"></td>
-                        <td><span id="isrc4"></span> &nbsp; <img src="" alt="" id="icon4"></td>
-                        <td><span id="isrc5"></span> &nbsp; <img src="" alt="" id="icon5"></td>
-                        <td><span id="isrc6"></span> &nbsp; <img src="" alt="" id="icon6"></td>
-                        <td><span id="isrc7"></span> &nbsp; <img src="" alt="" id="icon7"></td>
-                    </tr>
-                    <tr>
-                        <td><span id="forecast1"></span>&#8457;</td>
-                        <td><span id="forecast2"></span>&#8457;</td>
-                        <td><span id="forecast3"></span>&#8457;</td>
-                        <td><span id="forecast4"></span>&#8457;</td>
-                        <td><span id="forecast5"></span>&#8457;</td>
-                        <td><span id="forecast6"></span>&#8457;</td>
-                        <td><span id="forecast7"></span>&#8457;</td>
-                    </tr>
-                </table>
+                <h2>Seven Day Forecast</h2>
+                <div class="sevenday-container" data-type="sevenday-container">
+                </div>
             </section>
 
         </main>
@@ -101,9 +73,8 @@
 
     </div>
     <script src="js/scripts.js"></script>
-    <script src="js/curtemp-s.js"></script>
-    <script src="js/sevenday-s.js"></script>
-    <script src="js/weatherapi.js"></script>
+    <script src="js/city.js" type="module"></script>
+
 </body>
 
 </html>
