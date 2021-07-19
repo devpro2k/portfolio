@@ -2,7 +2,7 @@
 
 /* 35em is also 560px when basefont is 16px */
 @media only screen and (min-width: 32.5em) {
-   header {
+    header {
         display: grid;
         grid-template-columns: 6fr;
         grid-template-rows: 100px;
@@ -11,7 +11,8 @@
         background-color: brown;
         color: white;
         max-width: 100%;
-        border-radius: 10px 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
         margin: 0 auto;
     }
 
@@ -27,50 +28,32 @@
         font-size: 3rem;
         text-align: center;
         line-height: 1px;
-        font-family: 'Carter One', cursive;
+        font-family: 'roboto', sans-serif;
         color: white;
         display: block;
         margin-top: -.5em;
-        margin-left: 2.25em;
+
     }
 
     header h2 {
         font-size: 2rem;
         text-align: center;
-        line-height: 1px;
-        font-family: 'Lato', cursive;
+        line-height: auto;
+        font-family: 'roboto', sans-serif;
         color: white;
         padding-bottom: 1em;
         ;
     }
 
-    .motto {
-        margin-left: -2.5em;
-    }
-    
-
-    .navigation {
-        display: flex;
-    }
-
-    .navigation li:first-child {
-        display: none;
-    }
-
-    .navigation li a {
+    form {
         display: block;
-        font-size: 1.75em;
-    }
-
-    .navigation li {
-        display: block;
+        margin-left: 2em;
     }
 
     h2 {
         text-align: center;
         padding: .5rem;
         font-family: 'Carter One', sans-serif;
-        margin-left: 3.5em;
     }
 
     /* ****************************** this area is for images *************************************************** */
@@ -79,26 +62,30 @@
 
     }
 
-   
+
 
     /******************** All of my the middle of my webpage or main css will go below *******************/
-   
 
-        body {
+
+    body {
         background-color: cornsilk;
         font-family: 'Lato', sans-serif;
         display: grid;
+        max-width: 1000px;
+        justify-content: center;
+        display: block;
+        margin: 0 auto;
+}
 
-
-    }
-
-      .forecast {
-        display: grid;
+    
+    .forecast {
+        /*display: grid;
         grid-template-columns: repeat(3, 1fr);
         font-size: 18px;
         justify-content: right;
         margin-left: 9em;
-        padding-top: 1em;
+        padding-top: 1em;*/
+        margin-bottom: 2em;
     }
 
     .forecasthead {
@@ -106,28 +93,37 @@
         justify-content: right;
     }
 
-    .lazyload {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5em;
-    }
-    
-    .lazyload h2:nth-child(1) {
-		grid-column: 1 / span 2;
+    #ss-atmospheric {
+        grid-row: 1;
+        grid-column: 1;
+        width: fit-content;
+        align-self: center;
     }
 
-       
-        
+    .sevenday-container {
+        grid-template-columns: repeat(7, 1fr);
+        background: transparent;
+        border: 2px solid brown;
+        padding: 5px;
+    }
+    .forecast-day{
+        display: grid;
+        grid-template-rows: auto 1fr 1fr auto;
+    }
+
+
     /******************** All of my the bottom of my webpage or footer css will go below *****************/
 
     footer {
         max-width: 100%;
-        margin-left: 0.5em;
+        
         background-color: brown;
         text-align: center;
         color: white;
         font-size: 25px;
         padding: 1px;
-        border-radius: 10px 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     /*end medium */
