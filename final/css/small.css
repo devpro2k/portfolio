@@ -17,7 +17,7 @@ h2 {
   margin: 0;
   padding: 0.5rem;
   font-family: "roboto", sans-serif;
-  margin-left: 6em;
+  text-align: center;
 }
 
 header {
@@ -40,75 +40,30 @@ header {
 
 header h1 {
   font-size: 2.55em;
-  margin-left: -3.5rem;
+  /* margin-left: -3.5rem; */
   text-align: center;
   font-family: "roboto", sans-serif;
   color: white;
   display: block;
   margin-top: -1.55em;
-  margin-left: 1.25em;
+  /* margin-left: 1.25em; */
 }
 
 .motto {
   padding: 0.5rem;
   font-family: "roboto", sans-serif;
-  margin-left: 7.5em;
+  /* margin-left: 7.5em; */
 }
 
 header h3 {
   font-size: 0.75rem;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   text-align: center;
   font-family: "roboto", sans-serif;
   color: white;
 }
 
-nav {
-  margin: 0 auto;
-}
 
-.navigation {
-  list-style: none;
-  padding: 0;
-}
-
-.navigation ul {
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
-.navigation li:first-child {
-  display: block;
-}
-
-.navigation li {
-  display: none;
-}
-
-.navigation a {
-  display: block;
-  padding: 0.75rem;
-  text-align: left;
-  text-decoration: none;
-  color: white;
-}
-
-nav ul li.active a {
-  color: black;
-  background-color: burlywood;
-}
-
-.navigation a:hover {
-  color: black;
-  background-color: burlywood;
-}
-
-.responsive li {
-  display: block;
-}
 
 /******************** All of my the middle of my webpage or main css will go below *******************/
 .pic-head {
@@ -122,10 +77,10 @@ body {
 }
 
 main {
-  max-width: 100%;
+  /*max-width: 100%;*/
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 5em 1fr 8em 23em;
+  /*grid-template-rows: 5em 1fr 8em 23em;*/
   font-size: 0.8rem;
   background-color: cornsilk;
 }
@@ -133,57 +88,117 @@ main {
 
 /*  -------------------------  seven day forecast  ---------------  */
 
-.forecast {
-  /*display: grid;
-    grid-template-columns: repeat(3, 1fr);*/
+/*.forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   font-size: 18px;
   justify-content: right;
   padding-top: 1em;
-}
+}*/
 
 .forecasthead {
   font-size: 18px;
   justify-content: right;
 }
 
+.sevenday-container {
+  display: grid;
+  /* grid-template-columns: repeat(7, 1fr); */
+  grid-row-gap: 4em;
+  margin: 0 2em;
+  background: radial-gradient(goldenrod, rgb(0, 89, 255));
+  border: 2px solid brown;
+
+  padding: 5px;
+}
+
+.forecast-day {
+  text-align: center;
+  font-size: 1.5em;
+  background: radial-gradient(cornsilk, cadetblue);
+}
+
+.forecast-day p {
+  padding: 0.5em;
+}
+
+.forecast-day p,
+.forecast-day figure {
+  border: 1px solid brown;
+  /*border-bottom: 1px;*/
+  margin: 0;
+  width: 100%;
+}
+
+.forecast-day p:nth-of-type(1) {
+  border-top: 2px solid brown;
+}
+
+.forecast-day p:nth-of-type(3) {
+  border-bottom: 2px solid brown;
+}
+
+.forecast-day img {
+  display: block;
+  margin: 0 auto;
+  height: 4em;
+}
 
 
 /* ************* this area is to be used for all images ******************************************* */
 
 #overlay {
-  position: relative;
-  right: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#overlay .main-img-container {
+  grid-column: 1/3;
+  grid-row: 1;
+  align-items: center;
+  /*vertical*/
+  justify-content: center;
+  /*horizontal*/
 }
 
 
 
 #ss-atmospheric {
-    display: block;
-    margin-left: 1vw;
-    bottom: 23.5vh;
-    align-items: end;
-    box-shadow: 5px 5px 30px;
-    background-color: #222629;
-    position: absolute;
-    text-align: center;
-    font-size: 1em;
-  }
-  
-  #ss-atmospheric h2.weatherhead {
-    margin-left: 12px;
-  }
-  
-  #ss-atmospheric,
-  .daily-sum {
-    padding: 0.5em;
-    border: 1px solid goldenrod;
-    background: radial-gradient(burlywood, brown);
-    left: 20px;
-    height: 15em;
-    opacity: 0.75;
-    font-size: 15px;
-    color: black;
-  }
+  margin: 0 2em;
+  display: block;
+  box-shadow: 5px 5px 30px;
+  text-align: center;
+  font-size: 1em;
+  grid-column: 1/3;
+  /* grid-row: 1;
+  /* display: block;
+  margin-left: 1vw;
+  align-items: end;
+  box-shadow: 5px 5px 30px;
+  background-color: #222629;
+  position: relative;
+  width: fit-content;
+  text-align: center;
+  font-size: 1em;
+  grid-column: 1;
+  grid-row: 1; */
+}
+
+#ss-atmospheric h2.weatherhead {
+  margin-left: 12px;
+}
+
+#ss-atmospheric,
+.daily-sum {
+  padding: 0.5em;
+  border: 1px solid goldenrod;
+  background: radial-gradient(burlywood, brown);
+  left: 20px;
+  height: 15em;
+  opacity: 0.75;
+  font-size: 15px;
+  color: black;
+}
 
 #atmospheric {
   display: block;
@@ -213,39 +228,6 @@ main {
   color: black;
 }
 
-.lazyload {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-content: center;
-  grid-gap: 0.25em;
-}
-
-.lazyload img {
-  filter: blur(0em);
-  transition: filter 0.5s;
-  width: 100%;
-  height: 16em;
-}
-
-.lazyload img[data-src] {
-  filter: blur(0.2em);
-}
-
-.lazyload figure {
-  text-align: center;
-  margin: 0;
-}
-
-.lazyload figcaption {
-  background-color: cadetblue;
-  padding: 1em;
-  margin: 0;
-}
-
-.lazyload h2 {
-  text-align: center;
-}
 
 /******************** All of my the bottom of my webpage or footer css will go below *****************/
 
@@ -267,5 +249,12 @@ footer a {
   display: table;
   clear: both;
 }
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 /*end of small */
