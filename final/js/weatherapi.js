@@ -1,7 +1,9 @@
 /* --------------- Usually this is called endpoint but we are using apiURL in this exercise ----------*/
 const weathreURL =
-  "http://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&appid=466dca7cca93940a33882268fd25bd99";
+  "http://api.openweathermap.org/data/2.5/weather?q={phoenix}&units=imperial&appid=466dca7cca93940a33882268fd25bd99";
 
+
+  export default function getCurrentWeather() {
 fetch(weatherURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -42,4 +44,6 @@ fetch(weatherURL)
     const isrc = `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
     weathericon.setAttribute('src', isrc);
     weathericon.setAttribute('alt', jsObject.weather[0].description);
-  });
+  });}
+
+  getCurrentWeather();
