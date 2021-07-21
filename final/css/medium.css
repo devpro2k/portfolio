@@ -16,14 +16,6 @@
         margin: 0 auto;
     }
 
-    .headericon {
-        float: left;
-        height: 11em;
-        margin-left: 1em;
-        margin-top: 3em;
-        margin-bottom: 0;
-    }
-
     header h1 {
         font-size: 3rem;
         text-align: center;
@@ -32,7 +24,6 @@
         color: white;
         display: block;
         margin-top: -.5em;
-
     }
 
     header h2 {
@@ -42,7 +33,6 @@
         font-family: 'roboto', sans-serif;
         color: white;
         padding-bottom: 1em;
-        ;
     }
 
     form {
@@ -53,16 +43,13 @@
     h2 {
         text-align: center;
         padding: .5rem;
-        font-family: 'Carter One', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     /* ****************************** this area is for images *************************************************** */
     .banner-img {
         max-width: 100%;
-
     }
-
-
 
     /******************** All of my the middle of my webpage or main css will go below *******************/
 
@@ -75,17 +62,10 @@
         justify-content: center;
         display: block;
         margin: 0 auto;
-}
-
+    }
     
     .forecast {
-        /*display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        font-size: 18px;
-        justify-content: right;
-        margin-left: 9em;
-        padding-top: 1em;*/
-        margin-bottom: 2em;
+       margin-bottom: 2em;
     }
 
     .forecasthead {
@@ -106,17 +86,15 @@
         border: 2px solid brown;
         padding: 5px;
     }
+    
     .forecast-day{
         display: grid;
         grid-template-rows: auto 1fr 1fr auto;
     }
 
-
     /******************** All of my the bottom of my webpage or footer css will go below *****************/
-
     footer {
         max-width: 100%;
-        
         background-color: brown;
         text-align: center;
         color: white;
